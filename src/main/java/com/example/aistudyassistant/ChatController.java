@@ -38,4 +38,13 @@ public class ChatController {
         return "<h1>Server Time Check 🕒</h1>" +
                 "<p>Current Time: " + java.time.LocalDateTime.now() + "</p>";
     }
+
+    // 4. System Info check karana endpoint eka
+    @GetMapping("/info")
+    public String getSystemInfo() {
+        return "<h2>System Info 💻</h2>" +
+                "<p><strong>OS:</strong> " + System.getProperty("os.name") + "</p>" +
+                "<p><strong>Java Version:</strong> " + System.getProperty("java.version") + "</p>" +
+                "<p><strong>User:</strong> " + System.getProperty("user.name") + "</p>";
+    }
 }
